@@ -1,5 +1,4 @@
-#ifndef CRGB_H
-#define CRGB_H
+#pragma once
 
 /*
 Control a RGB led with Hue, Saturation and Brightness (HSB / HSV )
@@ -111,5 +110,3 @@ struct cRGB {
 	}
 #endif	
 };
-
-#endif

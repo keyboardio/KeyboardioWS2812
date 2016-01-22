@@ -17,8 +17,7 @@
 * License: GNU GPL v2 (see License.txt)
 */
 
-#ifndef WS2812_H_
-#define WS2812_H_
+#pragma once
 
 #include <avr/interrupt.h>
 #include <avr/io.h>
@@ -96,4 +95,3 @@ private:
 
 
 
-#endif /* WS2812_H_ */
