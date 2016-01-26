@@ -23,7 +23,7 @@ x from 0 - 255 : y = round(pow( 2.0, x+64/40.0) - 1)
 // uncomment this line if you use HSV is many projects
 #define USE_HSV
 
-#ifdef USE_HSV
+#ifdef USE_HSV_CURVE
 const byte dim_curve[] = {
 	0, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3,
 	3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4,
@@ -56,9 +56,10 @@ struct cRGB {
 		This looks the most natural.
 		*/
 
+#ifdef USE_HSV_CURVE
 		val = dim_curve[val];
 		sat = 255 - dim_curve[255 - sat];
-
+#endif
 		int base;
 
 		if (sat == 0) { // Acromatic color (gray). Hue doesn't mind.
