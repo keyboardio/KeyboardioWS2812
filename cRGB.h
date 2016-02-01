@@ -56,8 +56,8 @@ struct cRGB {
 		This looks the most natural.
 		*/
 
-		val = dim_curve[val];
-		sat = 255 - dim_curve[255 - sat];
+//		val = dim_curve[val];
+//		sat = 255 - dim_curve[255 - sat];
 
 		int base;
 
